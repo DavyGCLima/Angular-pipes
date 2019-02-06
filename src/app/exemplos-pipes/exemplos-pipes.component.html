@@ -1,10 +1,10 @@
 <h5>Exemplo de Pipes</h5>
 
 <p>Título: {{ book.title | camelCase }}</p>
-<p>Estrelas: {{ book.rating | number:'1.1-2' }}</p>
+<p>Estrelas: {{ book.rating | number:'1.1-1' }}</p>
 <p>Páginas: {{ book.numberPages | number }}</p>
 <p>Preço: {{ book.price | currency:'BRL' }}</p>
-<p>Data de lançamento: {{ book.releaseDate | date:'dd/MM/yyyy' }}</p>
+<p>Data de lançamento: {{ book.releaseDate | date }}</p>
 <p>Url: <a href="{{ book.url }}">Amazon</a> </p>
 <br>
 <p>Livro: {{ book | json }}</p>
