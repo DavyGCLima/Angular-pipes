@@ -28,6 +28,10 @@ export class ExemplosPipesComponent implements OnInit {
 
   filter: string;
 
+  asyncValue = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Valor assíncrono'), 2000);
+  });
+
   constructor() { }
 
   ngOnInit() {
@@ -49,9 +53,4 @@ export class ExemplosPipesComponent implements OnInit {
       return false;
     });
   }
-
-  asyncValue = new Promise((resolve, reject) => {
-    setTimeout(() => resolve('Valor assíncrono'), 2000)
-  });
-
 }
