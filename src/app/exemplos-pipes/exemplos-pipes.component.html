@@ -8,3 +8,24 @@
 <p>Url: <a href="{{ book.url }}">Amazon</a> </p>
 <br>
 <p>Livro: {{ book | json }}</p>
+
+<h5>Filtros</h5>
+
+<input type="text" #newValue>
+<button (click)="addBook(newValue.value)">+</button>
+<br><br>
+<a>Filtro</a>
+<br>
+<input type="text" [(ngModel)]="filter">
+
+<ul>
+    <!-- maneira correta de iterar sobre arrays, sem utilização direta de um 
+        pipe na tag -->
+    <li *ngFor="let bk of getBooks()">
+        {{ bk }}
+    </li>
+</ul>
+
+<p>{{ asyncValue | async }}</p>
+
+<p>{{ asyncValueObs | async }}</p>
